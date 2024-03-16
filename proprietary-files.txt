@@ -29,7 +29,9 @@ vendor/etc/init/init.gps.rc
 -vendor/lib64/libwrappergps.so
 
 ## RIL
+-vendor/bin/cass
 -vendor/bin/cbd
+vendor/etc/init/cass.rc
 vendor/etc/init/init.baseband.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/floating_feature.xml
@@ -41,20 +43,25 @@ vendor/etc/plmn_se13.bin
 -vendor/lib64/libengmode_client.so
 -vendor/lib64/libfloatingfeature.so
 -vendor/lib64/libvkmanager_vendor.so
--vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
--vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
--vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
--vendor/lib64/vendor.samsung.hardware.radio@2.0.so
--vendor/lib64/vendor.samsung.hardware.radio@2.1.so
--vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 
-## RIL - from gta4xl - P615XXS4DVA4
--vendor/bin/hw/rild|d4ee9a7cc9a8aa3623dc610e17213f9c7abe0181
-vendor/etc/init/init.vendor.rilchip.rc|0f5f13a11c084db5dc0eb47bb693235a2273f91e
--vendor/lib/libsemnativecarrierfeature.so|d280604d21163b87ca731df9b9d95d09b39f3c2a
--vendor/lib64/libril-samsung.so|629940983136ff525ed41a3324f50c3f9d752432
--vendor/lib64/libsec-ril.so|bcbfaa30a1482ce1a2134945143b00ab235a910c
--vendor/lib64/libsemnativecarrierfeature.so|ca44453cf7cca968606b56936be7de0d214d74be
+## RIL - from a54x - A546BXXU5BWK4
+-vendor/bin/hw/rild|249bd469620af395bcca58153d40cee6c28bdcb5
+vendor/etc/init/vendor.samsung.rilchip.slsi.rc|95aa52333814b340e5064eae3a9bd5cb8a96a3ff
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3f6228f2d572081b0c0ae29a251de4350b
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|e9cdde9d05c5cce32f76bbb164437f43b3288157
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
+-vendor/lib/libsemnativecarrierfeature.so|56ed7bd5f596502cf9614b5d9ebf255ac4e1e73c
+-vendor/lib64/libSemDataProps.so|023991c586ba36f42f06b7f9286cf417bcb8a9f8
+-vendor/lib64/libSemTelephonyProps.so|cbde8c62e9126875501d26681873b81e75dcd8a0
+-vendor/lib64/libril_sem.so|9bcd6054a5ebded9ba92f27ef00ab537ab1c09b9
+-vendor/lib64/libsec-ril.so|f66b4199957f40d0e023141e86606696a740872f
+-vendor/lib64/libsemnativecarrierfeature.so|b69b820d8881d4e7bba426212e4aba31095bb437
+-vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|738bc9ac0ca800b36e8b08652240ee01ddba6e47
+-vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|6faa7fbeab4b7d335d434729ec22493fde30028c
+-vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|fc3522bd787fa48ab80f53c0836cbb0c5ddf1b10
+-vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|8645b1d3d2e944a38ec07ee8c69d9f7d817b3730
+-vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|9b3b09c9bc2911b801d0de0caea13476a90f8776
+-vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|611a9f8ca1a46b33471643e200e70ce28f963b75
 
 ## TEEGRIS Firmware
 vendor/tee/00000000-0000-0000-0000-000000534b4d
@@ -62,3 +69,9 @@ vendor/tee/00000000-0000-0000-0000-0000534b504d
 vendor/tee/00000000-0000-0000-0000-0053545354ab
 vendor/tee/00000000-0000-0000-0000-4b45594d5354
 vendor/tee/00000000-0000-0000-0000-505256544545
+
+## VaultKeeper
+-vendor/bin/vaultkeeperd
+vendor/etc/init/vaultkeeper_common.rc
+-vendor/lib64/libstork_shared.so
+-vendor/lib64/libvkservice.so
